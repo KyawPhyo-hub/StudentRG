@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const { DynamoDBClient, PutItemCommand } = require('@aws-sdk/client-dynamodb');
 
 const app = express();
-const port = 3000; // Change this to your desired port
+const port = 80; // Change this to your desired port
 
 // Configure AWS SDK
 const client = new DynamoDBClient({
