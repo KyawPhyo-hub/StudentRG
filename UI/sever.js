@@ -18,6 +18,7 @@ app.post('/registerStudent', async (req, res) => {
     const params = {
         TableName: 'my-vdc-table',
         Item: {
+            vdc: { S: student.vdc }, // Partition key
             studentId: { S: student.studentId },
             name: { S: student.studentName },
             birthday: { S: student.birthday },
@@ -39,3 +40,4 @@ app.post('/registerStudent', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
